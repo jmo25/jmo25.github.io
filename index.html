@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jiaqi Mo</title>
+<meta name="description" content="Jiaqi Mo — undergraduate researcher at UW–Madison working on efficient machine learning and hardware–algorithm co-design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #ffffff;
+    --ink: #1b2430;
+    --muted: #5b6675;
+    --rule: #e3e7ec;
+    --link: #1f5f8b;
+    --gutter-ink: #3b4a5c;
+    --todo: #c0392b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #151a21;
+      --ink: #e6e9ee;
+      --muted: #9aa5b3;
+      --rule: #2a323d;
+      --link: #7fb6dc;
+      --gutter-ink: #b9c4d1;
+      --todo: #ff8a7a;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Literata", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 24px 72px; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+  /* Header */
+  header { display: grid; grid-template-columns: 1fr 150px; gap: 32px; align-items: start; }
+  h1 { font-size: 2.3rem; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01em; }
+  header p { margin: 0 0 12px; }
+  .links { margin-top: 16px; }
+  .links a { margin-right: 18px; }
+  .photo {
+    width: 150px; height: 150px; border-radius: 8px;
+    object-fit: cover; background: var(--rule);
+    display: grid; place-items: center;
+    color: var(--muted); font-size: 2rem;
+  }
+
+  /* Sections */
+  h2 { font-size: 1.3rem; font-weight: 600; margin: 48px 0 16px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+  .news { list-style: none; padding: 0; margin: 0; }
+  .news li { display: grid; grid-template-columns: 92px 1fr; gap: 16px; margin-bottom: 8px; }
+  .news time { color: var(--muted); }
+
+  /* Publications: teaser figure on the left, text on the right */
+  .pub { display: grid; grid-template-columns: 176px 1fr; gap: 22px; margin-bottom: 26px; align-items: start; }
+  .thumb {
+    width: 176px; aspect-ratio: 16 / 10; border-radius: 6px;
+    object-fit: cover; background: var(--rule);
+    display: grid; place-items: center;
+    color: var(--muted); font-size: 0.8rem;
+  }
+  img.thumb { object-fit: contain; background: #fff; border: 1px solid var(--rule); }
+  .thumb.badge { font-size: 1.05rem; font-weight: 600; color: var(--ink); letter-spacing: 0.02em; }
+  .authors .full { display: none; }
+  .authors.expanded .full { display: inline; }
+  .authors.expanded .short { display: none; }
+  .authors .more { border: 0; background: none; padding: 0; font: inherit; font-size: 0.85rem; color: var(--link); cursor: pointer; text-decoration: underline; }
+  .title { font-weight: 600; }
+  .authors { font-size: 0.95rem; color: var(--muted); }
+  .authors .me { color: var(--ink); font-weight: 600; }
+  .venue { font-size: 0.95rem; margin-top: 2px; }
+  .venue .state { color: var(--muted); font-style: italic; }
+  .legend { font-size: 0.85rem; color: var(--muted); margin: -6px 0 18px; }
+
+  .todo { color: var(--todo); border-bottom: 1px dashed var(--todo); }
+
+  footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); }
+
+  @media (max-width: 600px) {
+    main { padding-top: 32px; }
+    header { grid-template-columns: 1fr; }
+    header .photo { order: -1; width: 120px; height: 120px; }
+    .news li { grid-template-columns: 1fr; gap: 2px; }
+    .pub { grid-template-columns: 1fr; gap: 10px; }
+    .thumb { width: 100%; max-width: 320px; }
+  }
+  .pubgroup { font-size: 1.02rem; font-weight: 600; color: var(--muted); margin: 8px 0 16px; }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <div>
+      <h1>Jiaqi Mo</h1>
+      <p>I'm a senior at the University of Wisconsin–Madison studying computer sciences, graduating in December 2026. I work on efficient machine learning: making large models cheaper to run, from model architecture down to how inference maps onto hardware.</p>
+      <p>I currently work with Fred Sala on the design of hybrid state-space / Transformer models, and with Minjia Zhang (UIUC) on cascade inference for LLM-based kernel optimization and cloud serving for robot fleets. Before transferring to UW–Madison, I worked with Lina Wei at Hangzhou City University on Mamba-based multimodal models.</p>
+      <p><strong>I am applying to PhD programs for Fall 2027.</strong></p>
+      <div class="links">
+        <a href="mailto:mo29@wisc.edu">Email</a>
+        <a href="cv.pdf">CV</a>
+        <a href="https://scholar.google.com/citations?user=Y6Gn1_sAAAAJ">Google Scholar</a>
+        <a href="https://github.com/jmo25">GitHub</a>
+      </div>
+    </div>
+    <img class="photo" src="photo.jpg" alt="Jiaqi Mo">
+  </header>
+
+  <h2>News</h2>
+  <ul class="news">
+    <li><time>Oct 2026</time><span>Paper on synthetic languages for lightweight language model design submitted to ACL Rolling Review.</span></li>
+    <li><time>Sep 2026</time><span>Paper on layer ordering in hybrid architectures submitted to ICLR 2027.</span></li>
+    <li><time>Sep 2026</time><span><em>FORGE</em> accepted to ASPLOS 2027.</span></li>
+    <li><time>Sep 2026</time><span>Two papers accepted to NeurIPS 2026, including one in the Evaluations &amp; Datasets Track.</span></li>
+    <li><time>Sep 2026</time><span>Started as a peer mentor for CS 540 (Introduction to Artificial Intelligence).</span></li>
+    <li><time>2025</time><span><em>MamFusion</em> accepted to ICME 2025 as an oral presentation; follow-up work on continual audio-visual learning accepted to an ACM MM 2025 workshop.</span></li>
+  </ul>
+
+  <h2>Publications</h2>
+  <p class="legend">* equal contribution</p>
+
+  <h3 class="pubgroup">Efficient ML: Architectures and Systems</h3>
+
+  <div class="pub">
+    <img class="thumb" src="images/synthetic-lang.png" alt="">
+    <div>
+      <div class="title">Synthetic Languages as a Testbed for Lightweight Language Model Design</div>
+      <div class="authors"><span class="me">Jiaqi Mo*</span>, John Cooper*, Frederic Sala</div>
+      <div class="venue">ACL Rolling Review (NAACL 2027) <span class="state">(under review)</span></div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img class="thumb" src="images/hybrid.png" alt="">
+    <div>
+      <div class="title"><a href="https://arxiv.org/abs/2610.18104">The Effect of Layer Ordering in Hybrid Architectures</a></div>
+      <div class="authors">John Cooper*, Mingchen Ma*, <span class="me">Jiaqi Mo*</span>, Shengqi Qiu*, Nathaniel Bastian, Ilias Diakonikolas, Frederic Sala</div>
+      <div class="venue">ICLR 2027 <span class="state">(under review)</span></div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img class="thumb" src="images/forge.png" alt="">
+    <div>
+      <div class="title"><a href="https://arxiv.org/abs/2610.16890">FORGE: Procedural Weight Generation for Sparse MoE Inference</a></div>
+      <div class="authors">Chanyoung Moon, Travis Pence, Daisuke Yamada, <span class="me">Jiaqi Mo</span>, Vikas Singh, Karthikeyan Sankaralingam</div>
+      <div class="venue">ASPLOS 2027</div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img class="thumb" src="images/sandwich.png" alt="">
+    <div>
+      <div class="title">Fast Sandwich Products in Clifford Algebra</div>
+      <div class="authors">Travis Pence, Daisuke Yamada, <span class="me">Jiaqi Mo</span>, Chanyoung Moon, Karthikeyan Sankaralingam, Vikas Singh</div>
+      <div class="venue">NeurIPS 2026</div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <div class="thumb badge">MLSys</div>
+    <div>
+      <div class="title">KernelCascade: Stateful Model Cascading for Cost-Effective Kernel Optimization</div>
+      <div class="authors"><span class="me">Jiaqi Mo*</span>, Yichi Zhang*, Minjia Zhang</div>
+      <div class="venue">MLSys 2027 <span class="state">(in preparation)</span></div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <div class="thumb badge">MLSys</div>
+    <div>
+      <div class="title">SuperRobot: A Framework and Benchmark for Fleet-Scale Robot Intelligence in the Cloud</div>
+      <div class="authors">Hongyu Yao, Ziwen Zeng, <span class="me">Jiaqi Mo</span>, Minjia Zhang</div>
+      <div class="venue">MLSys 2027 <span class="state">(in preparation)</span></div>
+    </div>
+  </div>
+
+  <h3 class="pubgroup">Earlier and Other Work</h3>
+
+  <div class="pub">
+    <img class="thumb" src="images/mamfusion.png" alt="">
+    <div>
+      <div class="title"><a href="https://arxiv.org/abs/2506.03473">MamFusion: Multi-Mamba with Temporal Fusion for Partially Relevant Video Retrieval</a></div>
+      <div class="authors">Xinru Ying*, <span class="me">Jiaqi Mo*</span>, Jingyang Lin, Canghong Jin, Fangfang Wang, Lina Wei</div>
+      <div class="venue">ICME 2025 <span class="state">(oral)</span></div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img class="thumb" src="images/av-continual.png" alt="">
+    <div>
+      <div class="title"><a href="https://dl.acm.org/doi/10.1145/3746266.3762161">Mamba-Based Multimodal Continual Learning for Audio-Visual Classification with Prototype-Enhanced Anti-Forgetting Mechanism</a></div>
+      <div class="authors">Jingyang Lin*, Xinru Ying*, <span class="me">Jiaqi Mo</span>, Lina Wei, Fangfang Wang, Canghong Jin, Guanlin Chen</div>
+      <div class="venue">ACM MM 2025 Workshop (MMGR)</div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img class="thumb" src="images/os-omni.png" alt="">
+    <div>
+      <div class="title">OS-Omni: A Cross-Platform Benchmark for Generalist Computer-Using Agents</div>
+      <div class="authors"><span class="short">Hui Shen, Yunta Hsieh, Jianing Ma, Ziyuan Liu, Qi Han, …, <span class="me">Jiaqi Mo</span>, …, Qiushi Sun, Mi Zhang, Ping Luo, Wenhu Chen, Ngai Wong</span><span class="full">Hui Shen, Yunta Hsieh, Jianing Ma, Ziyuan Liu, Qi Han, Xiuqi Xu, Yanheng Shang, Chenqi Yin, Zesen Zhao, Boyuan Zheng, Jisen Li, Xiaoxia Wu, Ruoyan Zhang, Dongfu Jiang, Ruiyao Liu, Jing Xiong, He Xiao, Nan Zheng, Hangxiang Chen, Shengyang Tao, Deyang Luorong, Jingxuan Zhang, Chaofan Tao, Yuren Wang, <span class="me">Jiaqi Mo</span>, Hei Ting Una Chan, Sicheng Chen, Kai Zhang, Mengkang Hu, Zhongwei Wan, Xin Wang, Chuanyang Zheng, Ziheng Zhang, Hengyuan Zhang, Zunhai Su, Kanzhi Cheng, Jiawei Lu, Yifan Zhang, Shen Yan, Ben Athiwaratkun, Qiushi Sun, Mi Zhang, Ping Luo, Wenhu Chen, Ngai Wong</span> <button type="button" class="more">show all</button></div>
+      <div class="venue">NeurIPS 2026 (Evaluations &amp; Datasets Track)</div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img class="thumb" src="images/mathgen.png" alt="">
+    <div>
+      <div class="title"><a href="https://arxiv.org/abs/2603.27959">MathGen: Revealing the Illusion of Mathematical Competence through Text-to-Image Generation</a></div>
+      <div class="authors"><span class="short">Ruiyao Liu, Hui Shen, Ping Zhang, Yunta Hsieh, Yifan Zhang, …, <span class="me">Jiaqi Mo</span>, …, Jing Xiong, Xin Wang, Ziyuan Liu, Hangrui Cao, Ngai Wong</span><span class="full">Ruiyao Liu, Hui Shen, Ping Zhang, Yunta Hsieh, Yifan Zhang, Jing Xu, Qi Han, Junchen Li, Jiawei Lu, Jianing Ma, <span class="me">Jiaqi Mo</span>, Sicheng Chen, Zhen Zhang, Zhongwei Wan, Jing Xiong, Xin Wang, Ziyuan Liu, Hangrui Cao, Ngai Wong</span> <button type="button" class="more">show all</button></div>
+      <div class="venue">ECCV 2026 Workshop (MUCG); under review at TMLR</div>
+    </div>
+  </div>
+
+  <h2>Teaching</h2>
+  <p>Peer mentor, CS 540: Introduction to Artificial Intelligence, UW–Madison, Fall 2026.</p>
+
+  <footer>Last updated October 2026.</footer>
+
+</main>
+<script>
+document.querySelectorAll(".authors .more").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var a = btn.closest(".authors");
+    var open = a.classList.toggle("expanded");
+    btn.textContent = open ? "show less" : "show all";
+  });
+});
+</script>
+</body>
+</html>
