@@ -45,14 +45,14 @@
   a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 
   /* Header */
-  header { display: grid; grid-template-columns: 1fr 150px; gap: 32px; align-items: start; }
+  header { display: grid; grid-template-columns: 1fr 210px; gap: 40px; align-items: start; }
   h1 { font-size: 2.3rem; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01em; }
   header p { margin: 0 0 12px; }
   .links { margin-top: 16px; }
   .links a { margin-right: 18px; }
   .photo {
-    width: 150px; height: 150px; border-radius: 8px;
-    object-fit: cover; background: var(--rule);
+    width: 210px; height: 262px; border-radius: 10px; margin-top: 8px;
+    object-fit: cover; object-position: 45% 30%; background: var(--rule);
     display: grid; place-items: center;
     color: var(--muted); font-size: 2rem;
   }
@@ -91,7 +91,7 @@
   @media (max-width: 600px) {
     main { padding-top: 32px; }
     header { grid-template-columns: 1fr; }
-    header .photo { order: -1; width: 120px; height: 120px; }
+    header .photo { order: -1; width: 150px; height: 188px; margin-top: 0; }
     .news li { grid-template-columns: 1fr; gap: 2px; }
     .pub { grid-template-columns: 1fr; gap: 10px; }
     .thumb { width: 100%; max-width: 320px; }
@@ -105,7 +105,7 @@
   <header>
     <div>
       <h1>Jiaqi Mo</h1>
-      <p>I'm a senior at the University of Wisconsin–Madison studying computer sciences, graduating in December 2026. I work on efficient machine learning: making large models cheaper to run, from model architecture down to how inference maps onto hardware.</p>
+      <p>I'm a senior studying Computer Sciences at the University of Wisconsin–Madison, graduating in December 2026. My research focuses on efficient machine learning, from understanding model architectures to making inference and computation more efficient across software and hardware.</p>
       <p>I currently work with <a href="https://pages.cs.wisc.edu/~fredsala/">Fred Sala</a> on the design of hybrid state-space / Transformer models, and with <a href="https://minjiazhang.github.io/">Minjia Zhang</a> (UIUC) on cascade inference for LLM-based kernel optimization and cloud serving for robot fleets. Before transferring to UW–Madison, I worked with <a href="https://scholar.google.com/citations?user=Oy-s998AAAAJ">Lina Wei</a> at Hangzhou City University on Mamba-based multimodal models.</p>
       <p><strong>I am applying to PhD programs for Fall 2027.</strong></p>
       <div class="links">
@@ -121,9 +121,8 @@
   <h2>News</h2>
   <ul class="news">
     <li><time>Oct 2026</time><span>Paper on synthetic languages for lightweight language model design submitted to ACL Rolling Review.</span></li>
-    <li><time>Sep 2026</time><span>Paper on layer ordering in hybrid architectures submitted to ICLR 2027.</span></li>
-    <li><time>Sep 2026</time><span><em>FORGE</em> accepted to ASPLOS 2027.</span></li>
     <li><time>Sep 2026</time><span>Two papers accepted to NeurIPS 2026, including one in the Evaluations &amp; Datasets Track.</span></li>
+    <li><time>Sep 2026</time><span><em>FORGE</em> accepted to ASPLOS 2027.</span></li>
     <li><time>Sep 2026</time><span>Started as a peer mentor for CS 540 (Introduction to Artificial Intelligence).</span></li>
     <li><time>2025</time><span><em>MamFusion</em> accepted to ICME 2025 as an oral presentation; follow-up work on continual audio-visual learning accepted to an ACM MM 2025 workshop.</span></li>
   </ul>
@@ -170,7 +169,7 @@
   </div>
 
   <div class="pub">
-    <div class="thumb badge">MLSys</div>
+    <div class="thumb badge">Pending</div>
     <div>
       <div class="title">KernelCascade: Stateful Model Cascading for Cost-Effective Kernel Optimization</div>
       <div class="authors"><span class="me">Jiaqi Mo*</span>, Yichi Zhang*, Minjia Zhang</div>
@@ -179,7 +178,7 @@
   </div>
 
   <div class="pub">
-    <div class="thumb badge">MLSys</div>
+    <div class="thumb badge">Pending</div>
     <div>
       <div class="title">SuperRobot: A Framework and Benchmark for Fleet-Scale Robot Intelligence in the Cloud</div>
       <div class="authors">Hongyu Yao, Ziwen Zeng, <span class="me">Jiaqi Mo</span>, Minjia Zhang</div>
